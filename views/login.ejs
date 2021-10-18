@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Node Auth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+      *{
+        font-family: 'Roboto', sans-serif;
+        margin:3px,0px,3px,0px;
+        text-align: center;
+      }
+      
+      .login-form {
+        width: 400px;
+        height: 650px;
+        margin: 1rem auto;
+        border: 2px solid black;
+        width :80%;
+        border-radius: 12px;
+      }
+
+      .input-group {
+        margin:20px 0 20px 0;
+      }
+
+      .input-group label {
+        position: absolute;
+        left: 25%;
+        width : 20%;
+        text-align: left;
+      }
+
+      .input-group input {
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        right: 25%;
+        width: 20%;
+      }
+
+      button {
+        color: black;
+        background-color: #4E9F3D;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        margin:20px 0 20px 0;
+        border:0px;
+        padding:10px 20px 10px 20px;
+      }
+
+      button:hover{
+        background-color: #4d8a41;
+      }
+
+      h3{
+        background-color: rgb(255, 123, 0);
+        display: inline-block;
+        padding:10px 25% 10px 25%;
+        border-radius: 12px;
+      }
+
+      p{
+        border:1px solid rgb(241, 1, 1);
+        width:55%;
+        border-radius: 15px;
+        margin: 20px auto 0 auto;
+        padding :5px 1% 5px 1%;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-form">
+      <% if(err) { %>
+      <p style="color: red;"><%= err %></p>
+      <br>
+      <% } %>
+      <h3>Login Page</h3>
+      <form action="/login" method="POST">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" />
+        </div><br><br>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" />
+        </div>
+        <br><br>
+        <button>Login</button>
+      </form>
+      <a href="/register">Register</a>
+    </div>
+  </body>
+</html>

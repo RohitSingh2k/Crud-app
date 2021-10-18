@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+        div{
+            border: 2px solid black;
+            margin:auto;
+            width :80%;
+            height : auto;
+            border-radius: 15px;
+            padding : 15px;
+        }
+        img{
+            height: 260px;
+            width: 260px;
+            margin: auto;
+            border-radius: 50px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            background-color: #4E9F3D;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            
+        }
+        a:hover{
+            background-color: #4d8a41;
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            right: 25%;
+            width: 20%;
+        }
+        label{
+            position: absolute;
+            left: 25%;
+            width : 20%;
+            text-align: left;
+        }
+        
+        select{
+            margin-left: 31%;
+            border:1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            width:20%;
+        }
+        button{
+            background-color: rgb(255, 123, 0);
+            border-radius: 5px;
+            margin:20px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border:0px;
+        }
+        button:hover{
+            background-color: rgb(201, 99, 4);
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+        <img src="pro.jpg" alt="mypic">
+        <br>
+        <br>
+        <form action="/add" method="post">
+            <label for="birthday">date</label>
+            <input type="date" name="date">
+            <br>
+            <br>
+            <label for="">offer</label>
+            <input type="text" value="" name="offer">
+            <br>
+            <br>
+            <label for="">clicks</label>
+            <input type="digit" value="" name="clicks">
+            <br>
+            <br>
+            <label for="">unique clicks</label>
+            <input type="digit" value="" name="unique_clicks">
+            <br>
+            <br>
+            <label for="">conversions</label>
+            <input type="digit" value="" name="conversions">
+            <br>
+            <br>
+            <label for="">epc</label>
+            <input type="digit" value="" name="epc">
+            <br>
+            <br>
+            <label for="">unique epc</label>
+            <input type="digit" value="" name="unique_epc">
+            <br>
+            <br>
+            <label for="">revenue</label>
+            <input type="digit" value="" name="revenue">
+            <br>
+            <br>
+            <label for="">email</label>
+            <input type="email" value="<%= email %>" name="email">
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit">save</button>
+        </form>
+    </center>
+    </div>
+</body>
+</html>
