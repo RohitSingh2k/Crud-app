@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-const password = "admin";
+const password = "sunil";
 
 async function pass_generate(admin){
     const hasdPsw = await bcrypt.hash(admin, 12);
